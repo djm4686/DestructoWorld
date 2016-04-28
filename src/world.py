@@ -53,15 +53,15 @@ class World:
             self.draw()
 
     def determine_resource_drop(self, pixel_colors, mag, pos):
-        resources = []
+        rcs = []
         for color in pixel_colors:
             if random.randrange(0,1000) > 995:
                 red = color.r
                 green = color.g
                 blue = color.b
-                resources.append(resources.resource.Resource(pos, tools.vector.Vector(mag[1]*.1, mag[0]*.1), "red_resource", 10))
+                rcs.append(resources.resource.Resource(pos, tools.vector.Vector(mag[1]*.1, mag[0]*.1), "red_resource", 10))
 
-        return resources
+        return rcs
 
     # Changes position of all camera elements based on how much the origin changed
     # (Setting the ship back to it's original start point)
